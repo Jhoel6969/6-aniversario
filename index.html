@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Feliz 6 meses ❤️</title>
+
   <style>
     * {
       margin: 0;
@@ -13,31 +14,41 @@
     }
 
     body {
-      margin: 0;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: linear-gradient(135deg, #ffd6e7, #ffeef5, #fff7fb);
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 20px 0;
       position: relative;
     }
 
     .container {
-      width: 100%;
-      height: 100vh;
-      max-width: 100%;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 0;
+      width: 90%;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 25px;
       padding: 40px 30px;
       text-align: center;
-      box-shadow: none;
-      position: absolute;
-      top: 0;
-      left: 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      position: relative;
       z-index: 2;
-      overflow-y: auto;
+      margin: 20px auto;
     }
 
-    h1 { color: #d63384; font-size: 2.2rem; margin-bottom: 15px; }
-    h2 { color: #ff4d88; margin-bottom: 20px; font-size: 1.4rem; }
+    h1 {
+      color: #d63384;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #ff4d88;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
 
     p {
       color: #444;
@@ -83,6 +94,7 @@
     .pantalla { display: none; }
     .activa { display: block; }
 
+    /* PIXEL ART */
     .pixel {
       width: 12px;
       height: 12px;
@@ -105,9 +117,10 @@
       max-width: 100%;
     }
 
+    /* RESPONSIVE */
     @media (max-width: 480px) {
       .container {
-        width: 100%;
+        width: 95%;
         padding: 28px 18px;
       }
 
@@ -149,35 +162,35 @@
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    @keyframes grow {
-      from { transform: scale(0); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
   </style>
 </head>
+
 <body>
 
-  <!-- PANTALLA 1 ORIGINAL -->
   <div class="container activa" id="pantalla1">
     <h1>Feliz 6 meses, mi amor ❤️</h1>
     <h2>Gracias mi corazoncito por estar estos 6 meses a mi lado y los que faltan</h2>
+
     <p>
       Hoy cumplimos 6 meses y aunque estemos un poco lejitos,
       quiero que sepas que siempre estas en mi mente, mi corazon y mi alma, siendo tu y nuestro bebito lo más importante para mí.
     </p>
+
     <p>
-      Cada momento que paso contigo, cada risa, cada palabra bonita, 
+      Cada momento que paso contigo, cada risa, cada palabra bonita,
       cada vez que te veo y estamos juntos para mi son los mejores momentos y aun las aventuras que nos esperan junto a nuestro bebito .
     </p>
+
     <p>
-      Me encanta la forma en que haces que mis días sean mejores, aunque estes lejos, 
-      enserio me haces sentir muy feliz ya sea por mensajes, audios, fotitos que me mandas o en las llamadas que tenemos en las noches. 
+      Me encanta la forma en que haces que mis días sean mejores, aunque estes lejos,
+      enserio me haces sentir muy feliz ya sea por mensajes, audios, fotitos que me mandas o en las llamadas que tenemos en las noches.
     </p>
+
     <p>
-      Mi corazóncito tu eres una chica fantástica, fuerte, inteligente, hermosa, tierna, responsable y muchas cosas mas que puedo decir, pero en resumen eres perfecta, así como eres, 
+      Mi corazóncito tu eres una chica fantástica, fuerte, inteligente, hermosa, tierna, responsable y muchas cosas mas que puedo decir, pero en resumen eres perfecta, así como eres,
       nunca cambies mi amor.
     </p>
+
     <p>
       Te extraño, te pienso y te quiero mucho mucho mucho mi princesita hermosa.🥰🥰
     </p>
@@ -188,16 +201,14 @@
       Mi amor ya va 6 meses que estamos juntos pueden parecer poco, pero contigo han sido suficientes para darme cuenta de que eres la mujer que siempre soñé. ❤️
     </div>
 
-    <!-- NUEVO BOTON SIN BORRAR LO ANTERIOR -->
     <button class="heart-btn" onclick="irAFlores()">Ver sorpresa 💐</button>
   </div>
 
-  <!-- PANTALLA 2 NUEVA -->
   <div class="container pantalla" id="pantalla2">
     <h1>toma esta flor con mucho con cariño 🌸</h1>
     <p>Presiona y mira cómo se arma para ti ❤️</p>
 
-    <div class="extra-message" id="mensajeRamo" style="display: none;">
+    <div class="extra-message" id="mensajeRamo" style="display:none;">
       Esta flor es para ti, mi amor y tranquila que ya te dare uno en persona tbm 🌸❤️
     </div>
 
@@ -224,74 +235,69 @@
     }
 
     const dibujo = [
-  "0000001111000000",
-  "0000011111100000",
-  "0000111111110000",
-  "0001111111111000",
-  "0001111111111000",
-  "0000111111110000",
-  "0000011111100000",
-  "0000001111000000",
-  "0000000110000000",
-  "0000000110000000",
-  "0000000110000000",
-  "0000000110000000",
-  "0000001111000000",
-  "0000011001100000",
-  "0000110000110000",
-  "0001100000011000"
-];
+      "0000001111000000",
+      "0000011111100000",
+      "0000111111110000",
+      "0001111111111000",
+      "0001111111111000",
+      "0000111111110000",
+      "0000011111100000",
+      "0000001111000000",
+      "0000000110000000",
+      "0000000110000000",
+      "0000000110000000",
+      "0000000110000000",
+      "0000001111000000",
+      "0000011001100000",
+      "0000110000110000",
+      "0001100000011000"
+    ];
 
-let filaActual = 0;
-let animacionIniciada = false;
+    let filaActual = 0;
+    let animacionIniciada = false;
 
-function crearFlor() {
-  if (filaActual >= dibujo.length) return;
+    function crearFlor() {
+      if (filaActual >= dibujo.length) return;
 
-  const fila = document.createElement('div');
-  fila.classList.add('row');
+      const fila = document.createElement('div');
+      fila.classList.add('row');
 
-  for (let i = 0; i < dibujo[filaActual].length; i++) {
-    const pixel = document.createElement('div');
-    pixel.classList.add('pixel');
+      for (let i = 0; i < dibujo[filaActual].length; i++) {
+        const pixel = document.createElement('div');
+        pixel.classList.add('pixel');
 
-    if (dibujo[filaActual][i] === "1") {
-      if (filaActual <= 7) {
-        const tonosPetalo = ["#ff5c93", "#ff6fa3", "#ff85b5", "#ff4f8b"];
-        pixel.style.background = tonosPetalo[Math.floor(Math.random() * tonosPetalo.length)];
-      } else {
-        const tonosTallo = ["#4caf50", "#43a047", "#66bb6a"];
-        pixel.style.background = tonosTallo[Math.floor(Math.random() * tonosTallo.length)];
+        if (dibujo[filaActual][i] === "1") {
+          if (filaActual <= 7) {
+            const tonosPetalo = ["#ff5c93", "#ff6fa3", "#ff85b5", "#ff4f8b"];
+            pixel.style.background = tonosPetalo[Math.floor(Math.random() * tonosPetalo.length)];
+          } else {
+            const tonosTallo = ["#4caf50", "#43a047", "#66bb6a"];
+            pixel.style.background = tonosTallo[Math.floor(Math.random() * tonosTallo.length)];
+          }
+        }
+
+        fila.appendChild(pixel);
       }
-    } else {
-      pixel.style.background = "transparent";
+
+      document.getElementById('ramo').appendChild(fila);
+      filaActual++;
+
+      if (filaActual === dibujo.length) {
+        document.getElementById('mensajeRamo').style.display = 'block';
+      }
     }
 
-    fila.appendChild(pixel);
-  }
+    function iniciarAnimacion() {
+      if (animacionIniciada) return;
+      animacionIniciada = true;
 
-  document.getElementById('ramo').appendChild(fila);
-  filaActual++;
-
-  if (filaActual === dibujo.length) {
-    document.getElementById('mensajeRamo').style.display = 'block';
-  }
-}
-
-function iniciarAnimacion() {
-  if (animacionIniciada) return;
-  animacionIniciada = true;
-
-  const intervalo = setInterval(() => {
-    crearFlor();
-
-    if (filaActual >= dibujo.length) {
-      clearInterval(intervalo);
+      const intervalo = setInterval(() => {
+        crearFlor();
+        if (filaActual >= dibujo.length) clearInterval(intervalo);
+      }, 350);
     }
-  }, 350);
-}
 
-function crearCorazon() {
+    function crearCorazon() {
       const heart = document.createElement('div');
       heart.classList.add('heart');
       heart.innerHTML = '❤';
@@ -300,10 +306,11 @@ function crearCorazon() {
       heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
       document.body.appendChild(heart);
 
-      setTimeout(() => { heart.remove(); }, 8000);
+      setTimeout(() => heart.remove(), 8000);
     }
 
     setInterval(crearCorazon, 400);
   </script>
+
 </body>
 </html>
